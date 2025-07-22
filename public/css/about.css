@@ -1,0 +1,448 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* About Hero Section - MODIFIED */
+.about-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0; /* MODIFIED: Standardized hero height */
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* MODIFIED: Standardized hero title */
+.about-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* MODIFIED: Standardized breadcrumb style */
+.breadcrumb {
+  display: inline-flex; /* MODIFIED: To allow centering */
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.about-school-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.about-school-content .about-text {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #555;
+}
+
+.about-school-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.about-school-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.about-school-image:hover img {
+  transform: scale(1.05);
+}
+
+.about-school-image .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 125, 50, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.about-school-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-zoom {
+  color: white;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  transform: scale(0.8);
+}
+
+.about-school-image:hover .image-zoom {
+  transform: scale(1);
+}
+
+.image-zoom:hover {
+  background: white;
+  color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+/* Mission Vision Section */
+.mission-vision-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.mv-card {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.mv-card .mv-icon {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 auto 25px;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.mv-card:hover .mv-icon {
+  transform: rotateY(360deg);
+}
+
+.mission-card:hover {
+  border-color: #2196f3;
+}
+.vision-card:hover {
+  border-color: #673ab7;
+}
+.values-card:hover {
+  border-color: #e91e63;
+}
+
+.mission-card .mv-icon {
+  background: #2196f3;
+}
+.vision-card .mv-icon {
+  background: #673ab7;
+}
+.values-card .mv-icon {
+  background: #e91e63;
+}
+
+.mv-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--dark-text);
+}
+
+.mv-card p {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* History Timeline Section */
+.history-section {
+  padding: 80px 0;
+  background: white;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #e9ecef;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid var(--primary-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.timeline-container:hover::after {
+  background-color: var(--primary-color);
+}
+
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #f8f9fa;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  transition: all 0.3s;
+}
+.timeline-container:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-light);
+}
+
+.timeline-content h3 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  line-height: 1.7;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* Facilities Section */
+.facilities-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.facility-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  text-align: center;
+  padding: 30px;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(46, 125, 50, 0.15);
+}
+
+.facility-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-light);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+  color: var(--primary-dark);
+  font-size: 2.2rem;
+  transition: all 0.3s;
+}
+
+.facility-card:hover .facility-icon {
+  background: var(--primary-color);
+  color: white;
+  transform: rotate(-15deg) scale(1.1);
+}
+
+.facility-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--primary-dark);
+}
+
+.facility-card p {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .about-school-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .about-school-content .section-title {
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .mv-card,
+  .facility-card {
+    padding: 25px;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-hero-section {
+    padding: 60px 0;
+  }
+
+  .about-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+}
